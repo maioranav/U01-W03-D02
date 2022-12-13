@@ -238,8 +238,10 @@ console.log(`Il film più vecchio è:`, olderMovie(movies));
 */
 
 console.log("---------------- ESERCIZIO 11 ------------------");
-const qtyMovies = movies.filter((movie) => movie.Type === "movie").length;
-console.log(`There are ${qtyMovies} movies`);
+const qtyMovies = (array) => {
+  return array.filter((movie) => movie.Type === "movie").length;
+};
+console.log("There are", qtyMovies(movies), "movies");
 
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
