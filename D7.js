@@ -31,17 +31,22 @@ console.log(ex2());
 console.log("----------------- ESERCIZIO 3 ------------------");
 
 const array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const pari3 = array3.filter((n) => n % 2 === 0);
-console.log(pari3);
+const nPari = (array) => array.filter((n) => n % 2 === 0);
+console.log(nPari(array3));
 
 /* ESERCIZIO 4
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
 console.log("----------------- ESERCIZIO 4 ------------------");
-let somma4 = 0;
-array3.forEach((numero) => (somma4 += numero));
-console.log(`La somma dell'array iniziale dell'ex precedente è ${somma4}`);
+const somma4 = (array) => {
+  let somma = 0;
+  array.forEach((numero) => (somma += numero));
+  return somma;
+};
+console.log(
+  `La somma dell'array iniziale dell'ex precedente è ${somma4(array3)}`
+);
 
 /* ESERCIZIO 5
   Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
