@@ -6,9 +6,7 @@
 console.log("----------------- ESERCIZIO 1 ------------------");
 
 function esercizio1(stringa1, stringa2) {
-  return (
-    stringa1.slice(0, 2) + stringa2.slice(stringa2.length - 3)
-  ).toUpperCase();
+  return (stringa1.slice(0, 2) + stringa2.slice(-3)).toUpperCase();
 }
 console.log(esercizio1("Ciao a tutti", "sono Vincenzo"));
 
