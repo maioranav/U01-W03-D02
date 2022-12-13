@@ -18,7 +18,7 @@ console.log("----------------- ESERCIZIO 2 ------------------");
 
 const array2 = [];
 for (let i = 0; i < 10; i++) {
-  array2.push(Math.floor(Math.random(100) * 100));
+  array2.push(Math.floor(Math.random() * 101));
 }
 console.log(array2);
 
