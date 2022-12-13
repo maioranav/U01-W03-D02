@@ -55,8 +55,10 @@ console.log(
 console.log("----------------- ESERCIZIO 5 ------------------");
 const array5 = ex2();
 console.log(array5);
-const ex5 = array5.reduce((somma4, valore, i) => somma4 + valore);
-console.log(`La somma dell'array è ${ex5} con reduce`);
+const ex5 = (array) => {
+  return array.reduce((somma, valore, i) => somma + valore);
+};
+console.log("La somma dell'array è", ex5(array5), "con reduce");
 
 /* ESERCIZIO 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
@@ -64,11 +66,12 @@ console.log(`La somma dell'array è ${ex5} con reduce`);
 console.log("----------------- ESERCIZIO 6 ------------------");
 const n = 5;
 const array6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-const array6new = array6.map((valore) => {
-  return valore + n;
-});
+const array6new = (array) =>
+  array.map((valore) => {
+    return valore + n;
+  });
 console.log(array6);
-console.log(array6new);
+console.log(array6new(array6));
 
 /* ESERCIZIO 8
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
