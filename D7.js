@@ -15,12 +15,14 @@ console.log(esercizio1("Ciao a tutti", "sono Vincenzo"));
 */
 
 console.log("----------------- ESERCIZIO 2 ------------------");
-
-const array2 = [];
-for (let i = 0; i < 10; i++) {
-  array2.push(Math.floor(Math.random() * 101));
-}
-console.log(array2);
+const ex2 = () => {
+  const array2 = [];
+  for (let i = 0; i < 10; i++) {
+    array2.push(Math.floor(Math.random() * 101));
+  }
+  return array2;
+};
+console.log(ex2());
 
 /* ESERCIZIO 3
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter può aiutare)
@@ -46,8 +48,10 @@ console.log(`La somma dell'array iniziale dell'ex precedente è ${somma4}`);
 */
 
 console.log("----------------- ESERCIZIO 5 ------------------");
-const ex5 = array2.reduce((somma4, valore, i) => somma4 + valore);
-console.log(`La somma dell'array dell'ex2 è ${ex5} con reduce`);
+const array5 = ex2();
+console.log(array5);
+const ex5 = array5.reduce((somma4, valore, i) => somma4 + valore);
+console.log(`La somma dell'array è ${ex5} con reduce`);
 
 /* ESERCIZIO 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
