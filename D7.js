@@ -247,29 +247,38 @@ console.log("There are", qtyMovies(movies), "movies");
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 console.log("---------------- ESERCIZIO 12 ------------------");
-const onlyTitles = movies.map((movie) => movie.Title);
-console.log(onlyTitles);
+const onlyTitles = (array) => {
+  return array.map((movie) => movie.Title);
+};
+console.log(onlyTitles(movies));
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 console.log("---------------- ESERCIZIO 13 ------------------");
-const lastMovies = movies.filter((movie) => movie.Year >= 2000);
-console.log(lastMovies);
+const lastMovies = (array) => {
+  return array.filter((movie) => movie.Year >= 2000);
+};
+console.log(lastMovies(movies));
 
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
 console.log("---------------- ESERCIZIO 14 ------------------");
-const imdbQuery = "tt0399295";
-const imdbSet = movies.filter((movie) => movie.imdbID === imdbQuery);
-console.log(imdbSet);
+const imdbSet = (imdb, array = movies) => {
+  const imdbQuery = imdb;
+  return array.filter((movie) => movie.imdbID === imdbQuery);
+};
+console.log(imdbSet("tt0399295"));
 
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 console.log("----------------- ESERCIZIO 15 ------------------");
-let somma15 = 0;
-movies.forEach((film) => (somma15 += Number(film.Year)));
-console.log(`La somma degli anni è ${somma15}`);
+const anniSommati = (array) => {
+  let somma15 = 0;
+  array.forEach((film) => (somma15 += Number(film.Year)));
+  return somma15;
+};
+console.log("La somma degli anni è", anniSommati(movies));
