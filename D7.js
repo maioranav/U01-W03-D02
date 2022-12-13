@@ -221,14 +221,17 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 console.log("---------------- ESERCIZIO 10 ------------------");
-let lastYearSet = 9999;
-for (let i = 0; i < movies.length; i++) {
-  if (movies[i].Year < lastYearSet) {
-    lastYearSet = movies[i].Year;
-    olderMovie = movies[i];
+const olderMovie = (array) => {
+  let lastYearSet = 9999;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].Year < lastYearSet) {
+      lastYearSet = array[i].Year;
+      older = array[i];
+    }
   }
-}
-console.log(`Il film più vecchio è:`, olderMovie);
+  return older;
+};
+console.log(`Il film più vecchio è:`, olderMovie(movies));
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
