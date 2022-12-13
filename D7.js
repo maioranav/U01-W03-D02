@@ -92,12 +92,14 @@ console.log(array8new);
 
 console.log("----------------- ESERCIZIO 9 ------------------");
 
-const array9 = [];
-for (let i = 0; i < 99; i++) {
-  array9.push(i + 1);
-}
-const dispari9 = array9.filter((n) => n % 2 !== 0);
-console.log(dispari9);
+const dispari99 = () => {
+  const array9 = [];
+  for (let i = 0; i < 99; i++) {
+    array9.push(i + 1);
+  }
+  return array9.filter((n) => n % 2 !== 0);
+};
+console.log(dispari99());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
